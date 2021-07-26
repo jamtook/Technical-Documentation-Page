@@ -1,0 +1,161 @@
+<!-- -->
+<html>
+<head>
+  <title>CSS Properties</title>
+</head>
+<body>
+  <header>
+       
+    <nav id="navbar">
+		<ul>
+			<header id="header-nav">Table of contents</header>
+			<li><a class="nav-link" href="#introduction">Introduction</a></li>
+			<li><a class="nav-link" href="#1_display">1_Display</a></li>
+			<li><a class="nav-link" href="#2_width_height">2_Width_Height</a></li>
+			<li><a class="nav-link" href="#3_margin_padding">3_Margin_Padding</a></li>
+			<li><a class="nav-link" href="#4_floats">4_Floats</a></li>
+			<li><a class="nav-link" href="#5_clearing_floats">5_Clearing_Floats</a></li>
+		</ul>
+	</nav>
+   
+  </header>
+      
+    </nav>
+  </header>
+ <main id="main-doc">
+  
+     <section id="introduction" class="main-section"> 
+      <header>Introduction</header> 
+       <p>Here is a little information  on some common CSS properties that every developer needs to know.  </p>
+     </section>
+    
+     <section id="1_display" class="main-section"> 
+  <header>1_Display</header> 
+        <article>
+          <p>Display takes on many different values, but only 4 are most commonly used.  </p>
+          <div class="black-background">
+       <pre><code>           
+      div {
+          display: block;
+          display: inline-block;
+          display: inline;
+          display: none;
+         }</code> </pre>
+            </div>
+      <ul>
+        
+         <li><strong>block:</strong> Many HTML elements are set to this mode of display by browsers’ stylesheets. They include div, ul and text blocks like p. Block level elements by default take up as much space as they can, and they cannot be placed on the same horizontal line with any other display modes, include other block elements. (Exception: unless they are floated).
+<p>With block elements, you gain the ability to alter the element’s width and height to your liking, which is why they are used for layouts.</p>
+           
+         <li><strong>inline:</strong> The inline mode wraps many HTML elements tighty around them and is the defaults for all elements that are not specified with any other display values. Elements can be placed side by side on the same line as inline elements.     
+         <li><strong>inline-block: </strong>This is one display value that combines the properties of both block elements and inline elements. You get the ability to set a height and width, and the element can appear on the same horizontal line as other elements.
+           
+         <li><strong>none: </strong> Display none hides the element from the website and it will not be shown visually. This is very useful for CSS Dropdown menus where additional options appear when you hover on navigation menus. The rationale is that elements are set to a display value of none initially, and the display value is changed to block on hover.
+       </ul>
+        <p> <img src="https://live.staticflickr.com/65535/51329466754_c6343e1988_c.jpg" alt="Display values" title="Display values"> </p>
+    </section>  
+          
+          
+          
+   <section id="2_width_height" class="main-section"> 
+      <header>2_Width_Height</header>  
+     <p>Width and height properties are used closely with display:block and display:inline to set the width and height of HTML elements while creating a website. Common units units for Width and Height are:</p>
+       <ul>
+         <li><p><strong>px</strong> - Pixels.
+         <li><p><strong>em</strong> - A unit of measurement, where 1 em = current font size.
+         <li><p><strong>rem</strong> - Root em. Same measurement as em, but makes life much easier without the inheritance problem.
+         <li><p><strong>%</strong> - Percentages.
+         <li><p><strong>auto</strong> - highly useful unit, will explain below.
+     </ul>
+           <p>Other units of measurement can be found at the <a href="https://www.w3schools.com/CSSref/css_units.asp">W3 Schools website</a>.
+           <p>Extremely useful properties like max-width, min-width, max-height and min-height come into play as well when you’re making responsive websites. Here’s one example of how auto and max-width can be used to make sure images fit tightly and snugly into available space:</p>
+     <div class="black-background">
+        <pre><code>           
+      img {
+          max-width: 100%;
+          height: auto;
+         }</code> </pre>    
+     </div>
+    </section>  <br>
+           
+           
+           
+  <section id="3_margin_padding" class="main-section"> 
+      <header>3_Margin_Padding</header>  
+    <p/>Margins are paddings are things that will definitely appear. Knowing how these things work will be extremely beneficial when writing CSS.</p>
+           <p/>Margins and Paddings dictate the spaces between elements on your website. They are very similar and have the same units as Width and Height mentioned above.</p>
+           <p/>The only difference between margins and paddings is the area the exert control over. Margins affect the area outside of borders whereas paddings affect areas inside the border. </p>
+           <p>Ordinarily, margins are written in this manner:  
+         <div class="black-background">
+           <pre><code>           
+            div{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            margin-left: 10px
+             }</code> </pre> 
+        </div>   
+           <p>They can be written in shorthand to simplify the lines of codes and make it easier to read. In fact, shorthands are the standard practice and you should know them. Here’s a quick explanation:</p>
+           <div class="black-background">
+            <pre><code>           
+      img {
+          div{
+   margin: 20px 10px 20px 10px;
+   /*  This shorthand refers to TOP, Right, Bottom, Left. Its easier to picture a clock at 12, 3, 6 and 9 respectively */
+
+   margin: 20px 10px 20px;
+   /* This refers to Top, Left and Right, Bottom */
+
+   margin: 20px 10px;
+   /* This refers to Top and Bottom, Left and Right */
+
+   margin: 20px;
+   /* This refers to 20px worth of margin on all 4 sides */
+}
+         }</code> </pre>  
+           </div>
+           <p><strong>Extra tip:</strong> margins with auto on the left and right are used to center an element with a display value of block. Its written simply as:</p>
+           <div class="black-background">
+            <pre><code>           
+             div {
+          margin: 0 auto;
+         }</code> </pre>    
+         </div
+    </section> 
+    
+         
+    <section id="4_floats" class="main-section"> 
+      <header>4_Floats</header>  
+       <p>Floats are one of the core elements in today’s website. If you see two columns of text side by side, a sidebar / content configuration like what you see on my blog if your browser window is above 800px, you have noticed floats in action. Another commonly used area for floats are navigation items.</p>
+      <p>In the nutshell, what float simply does it to position the edge of the targeted HTML content at the edge of one side of the parent container. Subsequent floats will then be placed at the edge of your first floated content. (depending on whether you float it left or right)</p>
+      <p>Floats have 3 basic properties that you might use often:</p>
+      <ul>
+        <strong> <li> left</strong>
+        <strong> <li> right</strong>
+        <strong> <li> none</strong> - removes the float
+      </ul>
+      <p>You may want to check out the this post on <a href="https://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/">float theory</a> as well</p>
+      
+      
+      
+    <section id="5_clearing_floats" class="main-section"> 
+      <header>5_Clearing_Floats</header>  
+      <p>Even though floats are immensely useful, they are sometimes a headache if they are not cleared properly. In general, 2 kinds of problems may occur:</p>
+      <p><img src="https://live.staticflickr.com/65535/51329374993_4776dec470_c.jpg " alt="Float Problems" title="Float Problems"></p>
+      <p>The are 3 main methods for clearing floats:</p>
+      ul
+      <strong><li>clear: </strong> The Clear property takes in 3 values. left, right or both. As you might have suspected, clear:left; simply clears any floats on the left side, clear:right; clears floats on the right side while clear:both; ensures that all floats elements are cleared.
+      <strong><li>overflow:hidden;</strong> This method is great for ensuring the parent element does not collapse like in problem 2. overflow:hidden; is set to the parent element to combat the problem.
+      <strong><li>clearfix: </strong> No doubt you will have heard of or seen clearfix in tutorials. It is also set to the parent element to ensure float issues do not arise. The rationale behind the clearfix hack is to insert some content (a period) after the parent element to force the parent element to self clear since there is content after the floats.
+      <p><a href="https://css-tricks.com/snippets/css/clear-fix/">This post by Chris Coyier</a> has a great snippets on the clearfix hack. Read more about the clearfix hack on the pages he link to, or just head right down to the bottom section to grab the latest version.</p>
+      <p></p>
+    </section> 
+     
+   
+    
+  </main>
+  <footer>
+    I will fill this one with copyright information and maybe some links
+  </footer>
+</body>
+</html>
